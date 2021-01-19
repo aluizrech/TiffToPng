@@ -30,7 +30,7 @@ public class TiffToPNG {
                 throw new IOException("Formato de imagem não suportado.");
             }
 
-            ImageReader reader = iterator.next();
+            ImageReader reader = (ImageReader) iterator.next();
             reader.setInput(is);
 
             int numeroDePaginas = reader.getNumImages(true);
