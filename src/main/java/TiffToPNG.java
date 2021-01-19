@@ -16,7 +16,7 @@ public class TiffToPNG {
     }
 
     public static void convertTiffToPNG() {
-        File tiffFile = new File("C:\\Tiffs\\MAT000002.tif");
+        File tiffFile = new File("C:\\Tiffs\\exemplo.tiff");
 
         try {
 
@@ -38,7 +38,7 @@ public class TiffToPNG {
             String pathName = "C:\\Tiffs\\";
             for(int i = 0; i < numeroDePaginas; i++){
                 BufferedImage image = reader.read(i);
-                String fileName = tiffFile.getName().replace(".tif", "-"+(i+1)+".png");
+                String fileName = tiffFile.getName().replace(".tiff", "-"+(i+1)+".png");
                 ImageIO.write(image, "png", new File(pathName + fileName));
             }
 
